@@ -1,0 +1,366 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Times New Roman", Times, serif;
+    padding:0;
+    margin:0;
+}
+.container{
+    height:100vh;
+    width:100%;
+    background:linear-gradient(to right, #93C572 70%, #C8EBB1 30%);
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid #000;
+}
+.wave{
+    position:absolute;
+    top:0;
+    right:30%;
+}
+nav{
+    width:90%;
+    margin:auto;
+    padding-top:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display:flex;
+    list-style-type:none;
+}
+nav ul li{
+    margin:0 5px;
+}
+nav ul li a{
+    text-decoration:none;
+    padding:0.3rem 1.3rem;
+    font-size:25px;
+    font-weight:bold;
+    color:#000;
+    position: relative;
+    z-index:1;
+    
+}
+nav ul li a::after{
+    content:"";
+    width:0%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius:20px;
+    background-color:#C8EBB1;
+    z-index: -1;
+    transition: 0.5s;
+}
+nav ul li a:hover:after{
+    width:100%;
+}
+.main-content{
+    width:60%;
+    padding-top: 100px;
+    margin-left: 3rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search__box{
+    padding:.5rem 0 ;
+    border-bottom: 2px solid #f3f4f6;
+    margin-left: 25%;
+}
+.search__box input{
+    color:#f3f4f6;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+}
+.search__box i{
+    font-size: 1.2rem;
+    color: #000;
+    cursor: pointer;
+}
+.image-travel, .main-text{
+    flex-basis: 50%;
+}
+.image-travel img{
+    width: 100%;
+    border-radius: 30px;
+}
+.main-text {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.main-text h1 {
+    font-size: 3rem;
+    color: #305440; /* Dark green color */
+    margin-bottom: 20px;
+}
+
+.main-text p {
+    font-size: 1.2rem;
+    color: #555; /* Dark gray color */
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button.read_more,
+button.our_blogs {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #93C572;
+    color: #fff; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.read_more:hover,
+button.our_blogs:hover {
+    background-color: brown;
+}
+
+.swiper{
+    width:30rem;
+}
+.swiper-slide{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    position: absolute;
+    top:200px;
+    right:8%;
+    bottom:20%;
+    flex:1;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    border:#000;
+}
+form{
+    width:350px;
+    display: grid;
+    border-radius: 5px;
+    background-color:#ffffff33 ;
+    color: #4d8bb5;
+    border: 1px solid #000;
+}
+form h4{
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+.form__group{
+    display: grid;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+   
+}
+.form__group input{
+    padding: .5rem;
+    font-size: 1rem;
+    color:#ffffff33;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #f3f4f6;
+}
+form button{
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight:600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color:#fead53 ;
+    color: #545653;
+    cursor: pointer;
+}
+
+
+.aboutus {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #d8e3dc;
+    border-bottom: 1px solid #000;
+  }
+  .about-text {
+    margin-bottom: 20px;
+  }
+  .about-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+  .about-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+  }
+  .about-images img:hover {
+    transform: scale(1.1);
+  }
+  .aboutus h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .about-text p {
+    font-size: 18px;
+    color: #584040;
+    line-height: 1.6;
+  }
+  
+.features{
+    padding-top: 1rem;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #d8e3dc;
+}
+.feature {
+    width: 100%;
+    padding:  20px;
+    background-color: #d8e3dc;
+    color: #333;
+    text-align: center;
+    
+}
+
+.feature:nth-child(even) img {
+    float: right;
+    margin-left: 0.5rem;
+    
+}
+
+.feature:nth-child(odd) img {
+    float: left;
+}
+.features h1{
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+    
+}
+.feature h2 {
+    color:  #7661e3;
+    font-size: 25px;
+}
+.feature p {
+    margin-top: 0.5rem;
+    color: #cd1c1c;
+    font-size: 20px;
+    margin-right: 1rem;
+}
+
+
+.feature img {
+   width:200px;
+   height: auto;
+   margin-right: 1rem;
+   margin-bottom: 10px;
+   border-radius: 15px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+   object-fit: cover;
+   transition: transform 0.3s ease;
+}
+.feature img:hover{
+    transform: scale(1.1);
+}
+
+.contactus {
+    height: auto;
+    width: 100%;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    background-color: #d8e3dc;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.contact-info h2, .contact-form h2 {
+    color: #305440;
+}
+
+.contact-info p {
+    margin-top: 10px;
+    color: #305440;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form form {
+    margin-top: 6px;
+    padding-top: 2px;
+    display: flex;
+    margin-left: 34rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form form label {
+    margin-bottom: 10px;
+    color: #305440;
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #305440;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form form button {
+    padding: 10px 20px;
+    background-color: #d88383;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form form button:hover {
+    background-color:  #93C572;
+}
+
+.footer {
+    height: auto;
+    width: 100%;
+    background-color: #3ab76e;
+    color: #504343;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+
