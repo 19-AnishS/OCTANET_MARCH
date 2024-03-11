@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="wave">
+            <img src="bg.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#LP.html">Home</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#feature">Features</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+            </ul>
+            <div class="search__box">
+                <input type="text" placeholder="Search">
+                <i class="ri-search-line"></i>
+            </div>
+            <img width="90px" height="100px" border-radius="20px" src="logo.png" alt="">
+        </nav>
+        
+        <div class="main-content">
+            
+            <div class="image-travel">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">                        
+                      <div class="swiper-slide"><img src="img1.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img2.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img3.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img4.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img5.jpg" alt=""></div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="main-text">
+                <h1>Journey Gems</h1>
+                <p>Discover the rhythm of the world as you dance through vibrant cultures and picturesque landscapes on our immersive journeys</p>
+                <button class="read_more">Read More</button>
+                <button class="our_blogs">Our Blogs</button>
+            </div>
+        </div>
+    
+        <div class="right">
+            <form >
+                <h4>Where you want to go?</h4>
+                <div class="form__group">
+                    <label for="destination">Destionation</label>
+                    <input type="text" name="destination" id="destination" placeholder="Enter Destination">
+                </div>
+                <div class="form__group">
+                    <label for="date">Date</label>
+                    <input type="text" name="date" id="date" placeholder="dd/mm/yyyy">
+                </div>
+                <button type="submit">Check travel package</button>
+            </form>
+           
+        </div>
+    </div>
+
+    <div class="aboutus" id="aboutus">
+        <h1>Welcome to Our Travel Adventure</h1>
+        <div class="about-text">
+          <p>Welcome to Journey Gems, where every journey is a story waiting to be told. We're not just about destinations; we're about experiences. With a blend of passion and expertise, we craft bespoke travel experiences that capture the essence of exploration. Our dedicated team of adventurers is committed to providing personalized service that exceeds expectations. From majestic mountains to pristine beaches and vibrant cityscapes, we invite you to discover the world's wonders with us. Let's embark on a transformative voyage together and create memories that will last a lifetime.</p>
+        </div>
+        <div class="about-images">
+          <img src="a1.jpg" alt="Travel Image 2">
+          <img src="a2.jpg" alt="Travel Image 3">
+          <img src="a3.jpg" alt="Travel Image 4">
+        </div>
+      </div>
+    
+    
+    <div class="features" id="feature">
+        <h1>Features</h1></div>
+        <div class="feature">
+        <img src="ctp.jpg" alt="Custom Trip Planning">
+        <h2>Custom Trip Planning</h2>
+        <p>Enjoy personalized trip planning services tailored to your preferences. Our expert travel advisors will create custom itineraries based on your interests, budget, and travel style, ensuring a seamless and unforgettable journey.</p>
+    </div>
+
+    <div class="feature">
+        <img src="vir.jpg" alt="Virtual Reality Tours">
+        <h2>Virtual Reality Tours</h2>
+        <p>Immerse yourself in virtual reality tours of destinations around the world. Explore iconic landmarks, breathtaking landscapes, and cultural hotspots from the comfort of your home, allowing you to preview your travel destinations like never before.</p>
+    </div>
+
+    <div class="feature">
+        <img src="sus.jpg" alt="Sustainable Travel Options">
+        <h2>Sustainable Travel Options</h2>
+        <p>Discover eco-friendly travel options that minimize your environmental footprint and support local communities. Choose from sustainable accommodations, responsible tour operators, and carbon-offsetting initiatives to make your travels more eco-conscious.</p>
+    </div>
+
+    <div class="feature">
+        <img src="tra.jpg" alt="Travel Insurance Assistance">
+        <h2>Travel Insurance Assistance</h2>
+        <p>Get peace of mind with comprehensive travel insurance assistance. Our platform offers easy access to travel insurance providers, ensuring you're covered for unexpected events such as trip cancellations, medical emergencies, and lost luggage.</p>
+    </div>
+
+
+    <div class="contactus" id="contactus">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@yourtravelcompany.com <br>
+                Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Name
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </label><br>
+                <label for="email">Email
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </label><br>
+                <label for="message">Message <br>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                </label><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="address">
+            <p>&copy; Journey Gems Company. <br>
+                All rights reserved.</p>
+            <p>123 Main Street, <br>Cityville, <br>ABC123</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script>
+        var swiper=new Swiper(".mySwiper",{
+            slidePerView:1,
+            spaceBetween:30,
+            loop:true,
+        });
+    </script>
+
+
+</body>
+</html>
+
