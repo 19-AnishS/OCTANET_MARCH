@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #90dae1;
+    margin: 0;
+    padding: 0;
+}
+header{
+    width:100%;
+    position: sticky;
+    top:0;
+    z-index:1;
+    background: transparent;
+}
+header .main{
+    height:10vh;
+    width:100%;
+    margin:0 auto;
+    padding:0 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin:15px;
+}
+.logo img{
+    height:35px;
+    width:35px;
+}
+.logo p{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: default;
+}
+.container {
+    max-width: 500px;
+    height:100px;
+    margin: 20px auto;
+    background-color: #deb7b7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 40px;
+    padding-left: 50px;
+    filter: drop-shadow(20px 20px 40px #000);
+  }
+  .todo-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #cab3b3;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  .todo-item.completed {
+    text-decoration: line-through;
+    color: #cfc9c9;
+  }
+  .todo-item:hover {
+    background-color: #a07979;
+  }
+  .todo-text {
+    font-size: 20px;
+  }
+  .deadline-alert {
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+  }
