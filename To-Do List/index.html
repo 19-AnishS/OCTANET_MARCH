@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main">
+            <div class="logo">
+                <img src="logo.jpg" alt="">
+                <p>To-Do List</p>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <form id="todo-form">
+          <input type="text" id="task-input" placeholder="Enter your task">
+          <input type="date" id="completion-date">
+          <button type="submit">Add Task</button>
+        </form>
+        <div id="task-list"></div>
+      </div>
+      
+      <script>
+        document.getElementById('todo-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var taskInput = document.getElementById('task-input').value;
+          var completionDate = new Date(document.getElementById('completion-date').value);
+          var currentDate = new Date();
+      
+          var deadlineAlert = '';
+      
+          var timeDiff = completionDate.getTime() - currentDate.getTime();
+          var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+      
+          if (daysDiff > 0) {
+            deadlineAlert = 'Deadline Alert: ' + daysDiff + ' day(s) left';
+          } else if (daysDiff === 0) {
+            deadlineAlert = 'Task is due today!';
+          } else {
+            deadlineAlert = 'Task is overdue by ' + Math.abs(daysDiff) + ' day(s)';
+          }
+      
+          var taskList = document.getElementById('task-list');
+          var todoItem = document.createElement('div');
+          todoItem.classList.add('todo-item');
+          todoItem.innerHTML = `
+            <span class="todo-text">${taskInput}</span>
+            <span class="deadline-alert">${deadlineAlert}</span>
+          `;
+          taskList.appendChild(todoItem);
+      
+          document.getElementById('task-input').value = '';
+          document.getElementById('completion-date').value = '';
+      
+          todoItem.addEventListener('click', function() {
+            todoItem.classList.toggle('completed');
+            if (todoItem.classList.contains('completed')) {
+              setTimeout(function() {
+                todoItem.remove();
+              }, 500); // Remove after 500 milliseconds to allow time for animation
+            }
+          });
+        });
+      </script>
+      
+      
+</body>
+</html>
